@@ -1,5 +1,5 @@
 # Virtual-Assistant(Using Python)
-   import pyttsx3
+import pyttsx3
 import speech_recognition as sr
 import webbrowser
 import datetime
@@ -99,7 +99,7 @@ def sendEmail(to, content):
   server = smtplib.SMTP('smtp.gmail.com', 587)
   server.ehlo()
   server.starttls()
-  server.login('pratichrs526@gmail.com', 'ananya526@')
+  server.login('juhichrs526@gmail.com', 'ananya526@')
   server.sendmail('mushakan745@gmail.com', to, content)
   server.close()
 
@@ -178,7 +178,7 @@ def Take_query():
              continue
         elif " Arijit Singh" in query:
             speak("want to listen arijit singh playlist ok wait")
-            webbrowser.open("https://in.video.search.yahoo.com/search/video;_ylt=AwrxgKAkrhJgpGIAuSm7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Nj?p=songs+of+arijit+singh&fr=mcafee#id=1&vid=e0ce5e8fd5ddeb6c07753a38d972a19c&action=view")
+            webbrowser.open("https://in.video.search.yahoo.com/search/video;_ylt=AwrxgKAkrhJgpGIAuSm7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Nj?    p=songs+of+arijit+singh&fr=mcafee#id=1&vid=e0ce5e8fd5ddeb6c07753a38d972a19c&action=view")
             continue
         elif "play songs of Atif Aslam" in query:
             speak("ok please wait just for a minute")
@@ -188,46 +188,48 @@ def Take_query():
             speak("ok wait")
             webbrowser.open("https://open.spotify.com/playlist/4NUJtF3Jx3yUZMq0Kdp0Et")
             continue
-        elif "numbers" in query:
+            elif "numbers" in query:
+            speak("please tell me the first number")
             num1 = int(input('Enter First number: '))
+            speak("please tell me the second number")
             num2 = int(input('Enter Second number: '))
             continue
         elif "addition" in query:
             add = num1 + num2
-            print('Sum of ', num1, 'and', num2, 'is :', add)
+            speak('Sum of ', num1, 'and', num2, 'is :', add)
             continue
         elif "subtract" in query:
             dif = num1 - num2
-            print('Difference of ', num1, 'and', num2, 'is :', dif)
+            speak('Difference of ', num1, 'and', num2, 'is :', dif)
             continue
         elif "multiply" in query:
             mul = num1 * num2
-            print('Product of', num1, 'and', num2, 'is :', mul)
+            speak('Product of', num1, 'and', num2, 'is :', mul)
             continue
         elif "divide" in query:
             div = num1 / num2
-            print('Division of ', num1, 'and', num2, 'is :', div)
+            speak('Division of ', num1, 'and', num2, 'is :', div)
             floor_div = num1 // num2
-            print('Floor Division of ', num1, 'and', num2, 'is :', floor_div)
+            speak('Floor Division of ', num1, 'and', num2, 'is :', floor_div)
             continue
         elif "power" in query:
             power = num1 ** num2
-            print('Exponent of ', num1, 'and', num2, 'is :', power)
+            speak('Exponent of ', num1, 'and', num2, 'is :', power)
         elif " remainder" in query:
             modulus = num1 % num2
-            print('Modulus of ', num1, 'and', num2, 'is :', modulus)
+            speak('Modulus of ', num1, 'and', num2, 'is :', modulus)
             continue
         elif "day" in query:
             tellDay()
             continue
         elif "which is greater" in query:
             if (num1==num2):
-                print("both are equal")
+                speak("both are equal")
             elif (num1 > num2):
-                print(num1)
+                speak(num1)
 
             else:
-                print(num2)
+                speak(num2)
 
         elif "time" in query:
             tellTime()
